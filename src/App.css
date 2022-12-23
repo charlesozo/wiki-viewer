@@ -7,7 +7,6 @@
 .body {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 .main {
@@ -16,12 +15,11 @@
   display: inline-flex;
   border-radius: var(--border-radius);
   position: relative;
-  margin: 0 20px;
+  margin: 35px 20px;
 }
 
 .input {
   width: 100%;
-  /*width: 500px;*/
   height: var(--hieght);
   padding: 0 20px;
   font-size: 22px;
@@ -73,44 +71,40 @@
 }
 
 header {
-  border-bottom: 2px solid orange;
+  border-bottom: 3px solid orange;
 }
 .main-context {
   display: block;
-  
 }
 .result-search {
   display: block;
-  border-bottom: 2px solid orange;
+  border-bottom: 3px solid orange;
   text-decoration: none;
   color: lavender;
   padding: 0.8em 0;
   padding-left: 10px;
   cursor: pointer;
   font-size: 1.4rem;
-  font-family: 'Lato', sans-serif;
-
-  /* border: 1px solid yellow; */
+  font-family: "Lato", sans-serif;
 }
-.button-back{
+.button-back {
   display: flex;
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.go-back{
+.go-back {
   font-size: 1.4rem;
   cursor: pointer;
- color: #e67e22;
+  color: #e67e22;
 }
-.wiki{
-  /* border: 2px solid green; */
+.wiki {
   display: flex;
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 0;
 }
-.wiki-icon{
+.wiki-icon {
   font-size: 60px;
   color: #8f680a;
   cursor: pointer;

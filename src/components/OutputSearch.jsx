@@ -1,14 +1,18 @@
-import React, { useEffect,Suspense } from "react";
+import React, { Suspense } from "react";
 import { useData } from "./context";
 import { htmlToText } from "html-to-text";
-import { Navigate, useNavigate } from "react-router-dom";
-import {BsFillArrowLeftCircleFill} from "react-icons/bs"
+import { useNavigate } from "react-router-dom";
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 const OutputSearch = () => {
-  const navigate = useNavigate()
- const { results, loading, error, searchTerm } = useData();
+  const navigate = useNavigate();
+  const { results, loading, error, searchTerm } = useData();
   console.log(results);
-   return (
-    <Suspense fallback={<div style={{fontSize: "30px", color:"orange"}}>Loading...</div>}>
+  return (
+    <Suspense
+      fallback={
+        <div style={{ fontSize: "30px", color: "orange" }}>Loading...</div>
+      }
+    >
       <div className="output">
         <header>
           <h2
@@ -24,7 +28,7 @@ const OutputSearch = () => {
         </header>
         {loading && <h3>Loading...</h3>}
         {error && (
-          <p style={{ fontSize: "20px", color: "red" }}>
+          <p style={{ fontSize: "20px", color: "#fb280b" }}>
             An error occurred: {error.message}
           </p>
         )}
@@ -51,9 +55,12 @@ const OutputSearch = () => {
           ) : (
             <div className="result-search">No matching result found</div>
           )}
-         <div className="button-back">
-         <BsFillArrowLeftCircleFill className="go-back" onClick={()=>navigate(-1)}/>
-         </div>
+          <div className="button-back">
+            <BsFillArrowLeftCircleFill
+              className="go-back"
+              onClick={() => navigate(-1)}
+            />
+          </div>
         </div>
       </div>
     </Suspense>
