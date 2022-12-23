@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Search from './components/Search';
+import { Routes, Route } from 'react-router-dom';
+import { Context } from './components/context';
+import OutputSearch from './components/OutputSearch';
+import {FaWikipediaW} from "react-icons/fa"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context>
+      <div className='wiki'>
+      <a href="https://en.wikipedia.org/wiki/Main_Page" alt="" rel='noreferrer noopenner' target="_blank"><FaWikipediaW className='wiki-icon'/></a>
+      </div>
+      <Routes>
+        <Route exact path='/' element={<Search />}></Route>
+        <Route path='search' element={<OutputSearch />}></Route>
+      </Routes>
+       </Context>
   );
 }
 

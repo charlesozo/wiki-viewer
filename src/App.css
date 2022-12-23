@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+:root {
+  --hieght: 60px;
+  --border-radius: 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+}
+.main {
+  width: 100%;
+  max-width: 600px;
+  display: inline-flex;
+  border-radius: var(--border-radius);
+  position: relative;
+  margin: 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+  width: 100%;
+  /*width: 500px;*/
+  height: var(--hieght);
+  padding: 0 20px;
+  font-size: 22px;
+  color: rgb(27, 24, 24);
+  border: 2px solid #e67e22;
+  border-right: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input::placeholder {
+  color: #e67e22;
+}
+
+.icon {
+  width: 90px;
+  height: var(--hieght);
+  border: 2px solid #e67e22;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  cursor: pointer;
+  background: transparent;
+}
+
+.search {
+  font-size: 23px;
+  color: #e67e22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-shadow: 0 0 10px #e67e22;
+  background: transparent;
+}
+
+.input:focus + .icon .search {
+  transform: rotate(360deg);
+}
+.output {
+  width: 100%;
+}
+
+header {
+  border-bottom: 2px solid orange;
+}
+.main-context {
+  display: block;
+  
+}
+.result-search {
+  display: block;
+  border-bottom: 2px solid orange;
+  text-decoration: none;
+  color: lavender;
+  padding: 0.8em 0;
+  padding-left: 10px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+
+  /* border: 1px solid yellow; */
+}
+.button-back{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.go-back{
+  font-size: 1.4rem;
+  cursor: pointer;
+ color: #e67e22;
+}
+.wiki{
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.wiki-icon{
+  font-size: 60px;
+  color: #8f680a;
+  cursor: pointer;
 }
